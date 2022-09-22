@@ -5,20 +5,20 @@
 class Pike < Formula
   desc "Pike is a tool for determining the permissions or policy required for IAC code"
   homepage "https://github.com/JamesWoolfenden/pike#readme"
-  version "0.1.91"
+  version "0.1.92"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/JamesWoolfenden/pike/releases/download/v0.1.91/pike_0.1.91_darwin_arm64.tar.gz"
-      sha256 "bc7c80efaf5d9c8224e2b2115192a033b50475d4f071e9a6bdf21aa0164e480c"
+    if Hardware::CPU.intel?
+      url "https://github.com/JamesWoolfenden/pike/releases/download/v0.1.92/pike_0.1.92_darwin_amd64.tar.gz"
+      sha256 "b71011e27108b7875ddfa002dafe460179a13261bc3635131db9692ad60d671a"
 
       def install
         bin.install "pike"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/JamesWoolfenden/pike/releases/download/v0.1.91/pike_0.1.91_darwin_amd64.tar.gz"
-      sha256 "1a0535a723ae6d9ac18d3c127a6fe19314677a65a621585a84ed2f5f69b7d68d"
+    if Hardware::CPU.arm?
+      url "https://github.com/JamesWoolfenden/pike/releases/download/v0.1.92/pike_0.1.92_darwin_arm64.tar.gz"
+      sha256 "f4f225a2090adfbb2706248106d4c02517e9f8e769f8aa7434027a010abf53df"
 
       def install
         bin.install "pike"
@@ -27,17 +27,17 @@ class Pike < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JamesWoolfenden/pike/releases/download/v0.1.91/pike_0.1.91_linux_arm64.tar.gz"
-      sha256 "38a34f0769e91cf37fa2997a8518d3b02e623c1f1a013f8fc099e86bd503c90f"
+    if Hardware::CPU.intel?
+      url "https://github.com/JamesWoolfenden/pike/releases/download/v0.1.92/pike_0.1.92_linux_amd64.tar.gz"
+      sha256 "fe1ed1f2ab1217647fd81266c2cee784af038dcbe6e3968d048e46345898963c"
 
       def install
         bin.install "pike"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/JamesWoolfenden/pike/releases/download/v0.1.91/pike_0.1.91_linux_amd64.tar.gz"
-      sha256 "dd54b4102e3706557f78189e5a4a0995b3037b70c96c032a8c5d0273caad5ea1"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/JamesWoolfenden/pike/releases/download/v0.1.92/pike_0.1.92_linux_arm64.tar.gz"
+      sha256 "9683a12830cc23b37d1f03823539913bdc37ee5f79c8301390889af80283d089"
 
       def install
         bin.install "pike"

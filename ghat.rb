@@ -5,20 +5,20 @@
 class Ghat < Formula
   desc "Ghat is a tool for updating GHA dependencies"
   homepage "https://github.com/JamesWoolfenden/ghat#readme"
-  version "0.0.15"
+  version "0.0.16"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.15/ghat_0.0.15_darwin_arm64.tar.gz"
-      sha256 "be83388acac8ac91a0c62ccf371d0d2c1840889d889ac976f6446b7b1c33b8fe"
+    if Hardware::CPU.intel?
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.16/ghat_0.0.16_darwin_amd64.tar.gz"
+      sha256 "4d24b11c8e26e382da88898bcea7ac4f23e880f4b7a125728f4bafbc3f918faf"
 
       def install
         bin.install "ghat"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.15/ghat_0.0.15_darwin_amd64.tar.gz"
-      sha256 "887d7f6a447d7011de71da6681d2b050ebb24e37b05260893c0d6c9af96b56d6"
+    if Hardware::CPU.arm?
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.16/ghat_0.0.16_darwin_arm64.tar.gz"
+      sha256 "acaec73a3ed7c16e75b5a4aaf02a41d3b15312367cd30f609e39450b8c3b128c"
 
       def install
         bin.install "ghat"
@@ -28,16 +28,16 @@ class Ghat < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.15/ghat_0.0.15_linux_amd64.tar.gz"
-      sha256 "1e5492403b08f04fdf596bc7971db6590eb27fc0b15416f8420238deb78bfbd1"
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.16/ghat_0.0.16_linux_amd64.tar.gz"
+      sha256 "47ce8ea2971d46cb57e1a96a31bfb43e503eceaf774e2f06a8be7ccab40d1450"
 
       def install
         bin.install "ghat"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.15/ghat_0.0.15_linux_arm64.tar.gz"
-      sha256 "216db81a8814b9a7f64b91cb0d45e48efe383e0934f665fc505fc360db8d574a"
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.16/ghat_0.0.16_linux_arm64.tar.gz"
+      sha256 "c12b38e1b0787ccc8bd3d0ba18aa3f2e4d2317bd9de87d430555a8418e433860"
 
       def install
         bin.install "ghat"

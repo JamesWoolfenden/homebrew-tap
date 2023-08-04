@@ -5,20 +5,20 @@
 class Stevedore < Formula
   desc "stevedore is a tool for managing Dockerfile labels"
   homepage "https://github.com/JamesWoolfenden/stevedore#readme"
-  version "0.0.12"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/JamesWoolfenden/stevedore/releases/download/v0.0.12/stevedore_0.0.12_darwin_arm64.tar.gz"
-      sha256 "6df214b2b52f7c381c7a9d69d4143e63c536404b14fbc33c2f744d040470bd60"
+      url "https://github.com/JamesWoolfenden/stevedore/releases/download/v0.1.0/stevedore_0.1.0_darwin_arm64.tar.gz"
+      sha256 "930cda0d77144afe6c945ea550e54d3f9197fb3d3548314c56661a1807e7a90e"
 
       def install
         bin.install "stevedore"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/JamesWoolfenden/stevedore/releases/download/v0.0.12/stevedore_0.0.12_darwin_amd64.tar.gz"
-      sha256 "3c40c8c243bd2415b019c784e0d21ce062983a2abd9f7f3e2e8e8ce0b449f512"
+      url "https://github.com/JamesWoolfenden/stevedore/releases/download/v0.1.0/stevedore_0.1.0_darwin_amd64.tar.gz"
+      sha256 "3b01de20929c74fbfd9722bf3b7465cec950ae549cee397c4cbfcc0c9df6c3a6"
 
       def install
         bin.install "stevedore"
@@ -27,17 +27,17 @@ class Stevedore < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/JamesWoolfenden/stevedore/releases/download/v0.0.12/stevedore_0.0.12_linux_amd64.tar.gz"
-      sha256 "422b2824ecf6a5d8ca0b5d6eb930d7bd7e0b27b54cdf7bd82ed881d0ef2471ac"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/JamesWoolfenden/stevedore/releases/download/v0.1.0/stevedore_0.1.0_linux_arm64.tar.gz"
+      sha256 "c586cdb3166bc9c51064196f5a24151806f1fbbe6302571aee541c9145e8669a"
 
       def install
         bin.install "stevedore"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JamesWoolfenden/stevedore/releases/download/v0.0.12/stevedore_0.0.12_linux_arm64.tar.gz"
-      sha256 "b4fa23c6135089c23075d2ba22f10822e9771fe2730c8e9f5968426d581de3f3"
+    if Hardware::CPU.intel?
+      url "https://github.com/JamesWoolfenden/stevedore/releases/download/v0.1.0/stevedore_0.1.0_linux_amd64.tar.gz"
+      sha256 "3d7f03f34794b4a531f0e11e48294aaaddd1a3152d29c2f5475ee7bdcf50c0bd"
 
       def install
         bin.install "stevedore"

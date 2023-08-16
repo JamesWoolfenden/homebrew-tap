@@ -5,20 +5,20 @@
 class Ghat < Formula
   desc "Ghat is a tool for updating GHA dependencies"
   homepage "https://github.com/JamesWoolfenden/ghat#readme"
-  version "0.0.19"
+  version "0.0.20"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.19/ghat_0.0.19_darwin_arm64.tar.gz"
-      sha256 "192114fec2159d15dfe639f7df13d38899d6a4616043107191705e68f3a0c78a"
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.20/ghat_0.0.20_darwin_arm64.tar.gz"
+      sha256 "77c4891acaca034ad68e2625818f67dff2f329fcd421e6242c641cc66981d54d"
 
       def install
         bin.install "ghat"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.19/ghat_0.0.19_darwin_amd64.tar.gz"
-      sha256 "6865eaacde3d4f9a780660d119693de474939d1320e818eccfbc77361b6305fb"
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.20/ghat_0.0.20_darwin_amd64.tar.gz"
+      sha256 "4aab92ead6b9186d738751c5873bf4414b66452a1d5a64af85474380dbdbbf86"
 
       def install
         bin.install "ghat"
@@ -27,17 +27,17 @@ class Ghat < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.19/ghat_0.0.19_linux_arm64.tar.gz"
-      sha256 "372c3715ded475fbc256dabc5bc2eba1c1e3fc2fd838213906cac53a00fb2f18"
+    if Hardware::CPU.intel?
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.20/ghat_0.0.20_linux_amd64.tar.gz"
+      sha256 "7226ffd8b57b1bde2197d30ab40ab7c503e65e3815a09b8a213f80c21c291ff6"
 
       def install
         bin.install "ghat"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.19/ghat_0.0.19_linux_amd64.tar.gz"
-      sha256 "93706dda98260228ef46aa3430e568f921502c9cb6393120ec9fdace46978bf0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.20/ghat_0.0.20_linux_arm64.tar.gz"
+      sha256 "11351e4171768cade1ba379ab9eef8d7c4056ab94b5cc3e5cd876328f4711f80"
 
       def install
         bin.install "ghat"

@@ -5,20 +5,20 @@
 class Ghat < Formula
   desc "Ghat is a tool for updating GHA dependencies"
   homepage "https://github.com/JamesWoolfenden/ghat#readme"
-  version "0.0.22"
+  version "0.0.23"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.22/ghat_0.0.22_darwin_arm64.tar.gz"
-      sha256 "6842210a913f68140af7231f6f4f27e2317d1c042440c1e82302202b44aab610"
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.23/ghat_0.0.23_darwin_arm64.tar.gz"
+      sha256 "0d5a49beff45e78e8b3d23f0e8de24c353ee1183571fc236037be53664e9d4aa"
 
       def install
         bin.install "ghat"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.22/ghat_0.0.22_darwin_amd64.tar.gz"
-      sha256 "49c5df18d517217de18e4fe20c2261972693dcfcf69f0a20c194f60cecb3d656"
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.23/ghat_0.0.23_darwin_amd64.tar.gz"
+      sha256 "83b6fc6b16a5ddf4a8f2c4f4b5f00162dbb2261699265a6c5c05114dfb87e71b"
 
       def install
         bin.install "ghat"
@@ -28,16 +28,16 @@ class Ghat < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.22/ghat_0.0.22_linux_arm64.tar.gz"
-      sha256 "aa028bf0ebbe3e27f14ca22c08d909ace11a0b9a96d9a4b068ff383b7bc97363"
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.23/ghat_0.0.23_linux_arm64.tar.gz"
+      sha256 "a264b9eca6174369e3db0ca4adeb2235b74830ec3aae9062a9cd879ca1d843be"
 
       def install
         bin.install "ghat"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.22/ghat_0.0.22_linux_amd64.tar.gz"
-      sha256 "f6eda48e6fa9ed63680dc64fd32355c960506e2799967acf419dbe9f79a61998"
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.0.23/ghat_0.0.23_linux_amd64.tar.gz"
+      sha256 "371c0a8168f2364a1ca77dab5e1a4adc946fe34a76fa8b180991152640d8b9db"
 
       def install
         bin.install "ghat"

@@ -5,20 +5,20 @@
 class Ghat < Formula
   desc "Ghat is a tool for updating GHA dependencies"
   homepage "https://github.com/JamesWoolfenden/ghat#readme"
-  version "0.1.5"
+  version "0.1.6"
 
   on_macos do
     on_intel do
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.1.5/ghat_0.1.5_darwin_amd64.tar.gz"
-      sha256 "ac6f6907031a0bbcc289bfc7860cc37d5a36a58ede733895132bf005a6aa2b5f"
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.1.6/ghat_0.1.6_darwin_amd64.tar.gz"
+      sha256 "9edd5660ba410081ecc908d01b116c14e811a54eebc0cfaab779d98925927126"
 
       def install
         bin.install "ghat"
       end
     end
     on_arm do
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.1.5/ghat_0.1.5_darwin_arm64.tar.gz"
-      sha256 "67621606052637bafc94bcc0261addc7d38dc7f5f834d5fee55b075aa9e2cf77"
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.1.6/ghat_0.1.6_darwin_arm64.tar.gz"
+      sha256 "8700975519d6d97351af91ccae083a7b8139107a32a31b9662a3b8843b25963d"
 
       def install
         bin.install "ghat"
@@ -29,8 +29,8 @@ class Ghat < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.1.5/ghat_0.1.5_linux_amd64.tar.gz"
-        sha256 "bf093b7da6f8b30e61006032f02df24e76d28c98b7892ea897b018eb723458af"
+        url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.1.6/ghat_0.1.6_linux_amd64.tar.gz"
+        sha256 "4530ea35594db28df57f35fcd013ad36de23330c09f64cbcef9af1b4fa16fb26"
 
         def install
           bin.install "ghat"
@@ -39,8 +39,8 @@ class Ghat < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.1.5/ghat_0.1.5_linux_arm64.tar.gz"
-        sha256 "d908dbaed68ba9562392c8d4ddb7d98e0690019efcdff27881209f586bc9c620"
+        url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.1.6/ghat_0.1.6_linux_arm64.tar.gz"
+        sha256 "92629d402651eb75ab1e3a78200abc71b27ee5fab9fd8dbf6d1b18f5bdd75ace"
 
         def install
           bin.install "ghat"

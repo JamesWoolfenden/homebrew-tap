@@ -5,20 +5,20 @@
 class Sato < Formula
   desc "Sato is for converting Cloudformation to Terraform"
   homepage "https://github.com/JamesWoolfenden/sato#readme"
-  version "0.1.21"
+  version "0.1.22"
 
   on_macos do
     on_intel do
-      url "https://github.com/JamesWoolfenden/sato/releases/download/v0.1.21/sato_0.1.21_darwin_amd64.tar.gz"
-      sha256 "710a5c7be9aa57ac6dd09970b647a2294d0082f1ff65f145e5d0aba8a31afa28"
+      url "https://github.com/JamesWoolfenden/sato/releases/download/v0.1.22/sato_0.1.22_darwin_amd64.tar.gz"
+      sha256 "b3e5fa399cfdfb5d5cd3741ca6aa7b35bf9e9b8057bd7fe97a6da1ec6a9ea2ae"
 
       def install
         bin.install "sato"
       end
     end
     on_arm do
-      url "https://github.com/JamesWoolfenden/sato/releases/download/v0.1.21/sato_0.1.21_darwin_arm64.tar.gz"
-      sha256 "0aa4b3cc42e1856e4c988dfbfe088f931f48df99d68b98e7c2a3f43b20820486"
+      url "https://github.com/JamesWoolfenden/sato/releases/download/v0.1.22/sato_0.1.22_darwin_arm64.tar.gz"
+      sha256 "9aab3a4438da63d42f767347ac8379a987b0acf0a285df5ec2bc13193b599bdb"
 
       def install
         bin.install "sato"
@@ -29,8 +29,8 @@ class Sato < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/JamesWoolfenden/sato/releases/download/v0.1.21/sato_0.1.21_linux_amd64.tar.gz"
-        sha256 "72dfd57106e9beb58bdb2b9f48e7d705b36fd23ae34ac1c73d27dccbc8c89954"
+        url "https://github.com/JamesWoolfenden/sato/releases/download/v0.1.22/sato_0.1.22_linux_amd64.tar.gz"
+        sha256 "5337a0d5574f852b1ff64089c6e4bb7f27777fec8c89ad89198651cd658e4351"
 
         def install
           bin.install "sato"
@@ -39,8 +39,8 @@ class Sato < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/JamesWoolfenden/sato/releases/download/v0.1.21/sato_0.1.21_linux_arm64.tar.gz"
-        sha256 "a6d569c2f357601330518d3815b5323aea02c0f0e9558233dd1c55a45eafe94e"
+        url "https://github.com/JamesWoolfenden/sato/releases/download/v0.1.22/sato_0.1.22_linux_arm64.tar.gz"
+        sha256 "48c06b353d9d19df22ba185dc7ceae4254a4e7c78e6ada5f8104f429f8b55096"
 
         def install
           bin.install "sato"

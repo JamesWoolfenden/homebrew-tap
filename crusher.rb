@@ -5,20 +5,20 @@
 class Crusher < Formula
   desc "crusher is a utility bigtable applications"
   homepage "https://github.com/JamesWoolfenden/crusher#readme"
-  version "0.0.10"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/JamesWoolfenden/crusher/releases/download/v0.0.10/crusher_0.0.10_darwin_amd64.tar.gz"
-      sha256 "4bddfc62038f166cc1a7d240bc17ad27ecbb8278e903671d7b3c418c46a2924f"
+      url "https://github.com/JamesWoolfenden/crusher/releases/download/v0.1.0/crusher_0.1.0_darwin_amd64.tar.gz"
+      sha256 "ac465a873422d3a0bc28df072a7e5858ae73d00432410131dd9fe8afb986f06d"
 
       def install
         bin.install "crusher"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/JamesWoolfenden/crusher/releases/download/v0.0.10/crusher_0.0.10_darwin_arm64.tar.gz"
-      sha256 "c513038c64aea30c1a97f7cbc566d58c09f27d066c06be71f2c237d7a7a72012"
+      url "https://github.com/JamesWoolfenden/crusher/releases/download/v0.1.0/crusher_0.1.0_darwin_arm64.tar.gz"
+      sha256 "ec5a481c546a1bb7384e8478f4bef6e6a926557e1efe1e46b38b8407d8c3c508"
 
       def install
         bin.install "crusher"
@@ -27,18 +27,16 @@ class Crusher < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JamesWoolfenden/crusher/releases/download/v0.0.10/crusher_0.0.10_linux_arm64.tar.gz"
-      sha256 "858d919b8df27ecf94230d2c58ff38ebaa6f967c3c8167daf97b7d547be08947"
-
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/JamesWoolfenden/crusher/releases/download/v0.1.0/crusher_0.1.0_linux_amd64.tar.gz"
+      sha256 "0b4554ec10265e9f419b68e7e160490990810bd48621c4dda71d5b669aaf86f1"
       def install
         bin.install "crusher"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/JamesWoolfenden/crusher/releases/download/v0.0.10/crusher_0.0.10_linux_amd64.tar.gz"
-      sha256 "14e9bb65caa35fca3b07bcba5c6eb751db77c6de3d99efb2eb1756b489014763"
-
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/JamesWoolfenden/crusher/releases/download/v0.1.0/crusher_0.1.0_linux_arm64.tar.gz"
+      sha256 "134b97692fe20dcd6da2cdf10986bc119fb241af4b64e8ad6087a0ee533756c7"
       def install
         bin.install "crusher"
       end

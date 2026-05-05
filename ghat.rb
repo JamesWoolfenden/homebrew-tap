@@ -5,20 +5,20 @@
 class Ghat < Formula
   desc "Ghat is a tool for updating GHA dependencies"
   homepage "https://github.com/JamesWoolfenden/ghat#readme"
-  version "0.1.25"
+  version "0.1.26"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.1.25/ghat_0.1.25_darwin_amd64.tar.gz"
-      sha256 "0da0e93c0fbddb2c1162416380a9b7f79a0cf106a6906742a4eb98cfec1baf29"
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.1.26/ghat_0.1.26_darwin_amd64.tar.gz"
+      sha256 "457267c80939910b419cb4144161da8532319eb5f325f68c94cef7746adf1d55"
 
       define_method(:install) do
         bin.install "ghat"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.1.25/ghat_0.1.25_darwin_arm64.tar.gz"
-      sha256 "cfac43417fce85c3c1950e49df261c9b2d35515bc3142ff5f8694e67094a05e0"
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.1.26/ghat_0.1.26_darwin_arm64.tar.gz"
+      sha256 "d3f9746045f2865fb03cc758dec84b37d772c2bf7b9844605fb50b4b62fb73cf"
 
       define_method(:install) do
         bin.install "ghat"
@@ -28,15 +28,15 @@ class Ghat < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.1.25/ghat_0.1.25_linux_amd64.tar.gz"
-      sha256 "fd6ef0015750c8e37611db0c4bd5845572e007f1657bc42ab319eddb73eb6d6b"
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.1.26/ghat_0.1.26_linux_amd64.tar.gz"
+      sha256 "e96fa60308b615012255195cfca049d394d07f9179cb22460fa4da888992957d"
       define_method(:install) do
         bin.install "ghat"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.1.25/ghat_0.1.25_linux_arm64.tar.gz"
-      sha256 "5ed49e42b7bec10bf77aa5be312f077ec530213b5c4cfebf0e0ff5fc027d940f"
+      url "https://github.com/JamesWoolfenden/ghat/releases/download/v0.1.26/ghat_0.1.26_linux_arm64.tar.gz"
+      sha256 "bd8138452c8d501aa3258392b651603bfd028c49d772aa273f7d7652491fe7b5"
       define_method(:install) do
         bin.install "ghat"
       end

@@ -5,20 +5,20 @@
 class Gitfab < Formula
   desc "Opens a git repo in a browser"
   homepage "https://github.com/JamesWoolfenden/gitfab#readme"
-  version "0.0.5"
+  version "0.0.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/JamesWoolfenden/gitfab/releases/download/v0.0.5/gitfab_0.0.5_darwin_amd64.tar.gz"
-      sha256 "ba82aa5cbb87f65e78244e2e375ddf0c1ee4dd49ec58d008d98ecc02ecd97b79"
+      url "https://github.com/JamesWoolfenden/gitfab/releases/download/v0.0.6/gitfab_0.0.6_darwin_amd64.tar.gz"
+      sha256 "5b328b1c3b87ba334169736c268555c8af3fc9d867b56aabde91dde0b1fd90c9"
 
       define_method(:install) do
         bin.install "gitfab"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/JamesWoolfenden/gitfab/releases/download/v0.0.5/gitfab_0.0.5_darwin_arm64.tar.gz"
-      sha256 "13e0d29cba993de28dd42dfbeec54a08bb1fe504183cf90d17ae32c07cc8072c"
+      url "https://github.com/JamesWoolfenden/gitfab/releases/download/v0.0.6/gitfab_0.0.6_darwin_arm64.tar.gz"
+      sha256 "7c11e475816dcd8d763a9049a04c30726a3ce517b112642d0c9610a920274be2"
 
       define_method(:install) do
         bin.install "gitfab"
@@ -28,15 +28,15 @@ class Gitfab < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JamesWoolfenden/gitfab/releases/download/v0.0.5/gitfab_0.0.5_linux_amd64.tar.gz"
-      sha256 "0a8bfc7e5de6b30622dd185cd88f9080cc732e978b10b114acea6e7228a39564"
+      url "https://github.com/JamesWoolfenden/gitfab/releases/download/v0.0.6/gitfab_0.0.6_linux_amd64.tar.gz"
+      sha256 "7e1d3bcc2cdf0053cbefda8d5510817aa2385ccdd042773c2cfb278c6872f26f"
       define_method(:install) do
         bin.install "gitfab"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JamesWoolfenden/gitfab/releases/download/v0.0.5/gitfab_0.0.5_linux_arm64.tar.gz"
-      sha256 "d1381b103bbb204a560961eebf54bc45b80ca7a8c0f51a6024dab401ad4a78db"
+      url "https://github.com/JamesWoolfenden/gitfab/releases/download/v0.0.6/gitfab_0.0.6_linux_arm64.tar.gz"
+      sha256 "1f3c390be7960007b516c7c7e853ef76d064ec449ceef45e1223b059988828a7"
       define_method(:install) do
         bin.install "gitfab"
       end
